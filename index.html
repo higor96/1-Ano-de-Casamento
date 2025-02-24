@@ -85,10 +85,27 @@
       <p>Prepare-se para rir, amar e revolucionar juntos. Afinal, juntos somos imbatíveis!</p>
       <p>Que a luta do amor continue! <span class="heart">❤️</span></p>
     </div>
-    <div class="photos">
-      <img src="URL_DA_FOTO_1" alt="Momento revolucionário 1">
-      <img src="URL_DA_FOTO_2" alt="Momento revolucionário 2">
+    <div class="carousel-container">
+      <!-- Substitua os links abaixo pelas URLs ou caminhos das suas fotos -->
+      <img class="carousel-image" src="URL_DA_FOTO_1" alt="Momento revolucionário 1">
+      <img class="carousel-image" src="URL_DA_FOTO_2" alt="Momento revolucionário 2">
+      <img class="carousel-image" src="URL_DA_FOTO_3" alt="Momento revolucionário 3">
     </div>
   </main>
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.carousel-image');
+    function showSlide() {
+      slides.forEach(slide => slide.classList.remove('active'));
+      slideIndex = (slideIndex + 1) % slides.length;
+      slides[slideIndex].classList.add('active');
+    }
+    // Exibe a primeira imagem inicialmente
+    if (slides.length > 0) {
+      slides[slideIndex].classList.add('active');
+    }
+    // Altera a imagem a cada 3 segundos (3000 ms)
+    setInterval(showSlide, 3000);
+  </script>
 </body>
 </html>

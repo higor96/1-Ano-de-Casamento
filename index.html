@@ -8,13 +8,15 @@
     @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
     body {
       font-family: 'Patrick Hand', cursive;
-      background-color: #000;
-      color: #f06292;
+      /* Fundo em degradê de Azul Oceano (#00BFFF) para Areia (#F5DEB3) */
+      background: linear-gradient(to bottom, #00BFFF, #F5DEB3);
+      /* Texto em tom escuro para boa legibilidade */
+      color: #003366;
       margin: 0;
       padding: 0;
     }
     header {
-      background-color: #f06292;
+      background-color: #00BFFF;
       color: white;
       padding: 2em 0;
       text-align: center;
@@ -38,7 +40,8 @@
     .content {
       max-width: 600px;
       text-align: center;
-      background: #212121;
+      /* Fundo com cor de areia */
+      background: #F5DEB3;
       padding: 2em;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -52,11 +55,12 @@
       margin: 0.5em 0;
     }
     .heart {
-      color: #f06292;
+      /* Coração na cor Azul Oceano */
+      color: #00BFFF;
       font-size: 1.5em;
     }
     .carousel-container {
-         max-width: 600px;
+      max-width: 600px;
       width: 100%;
       position: relative;
       overflow: hidden;
@@ -75,7 +79,6 @@
 <body>
   <header>
     <h1>1 Ano de Casamento: A aventura está apenas começando</h1>
-
   </header>
   <main>
     <div class="content">
@@ -132,7 +135,7 @@
     if (slides.length > 0) {
       slides[slideIndex].classList.add('active');
     }
-    // Altera a imagem a cada 3 segundos (3000 ms)
+    // Altera a imagem a cada 1 segundo (1000 ms)
     setInterval(showSlide, 1000);
   </script>
 </body>

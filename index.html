@@ -78,13 +78,13 @@
 </head>
 <body>
   <header>
-    <h1>Nosso primeiro aniversário de casamento <span class="heart">❤️</span></h1>
+    <h1>Nosso primeiro aniversário de casamento!!!!!!</h1>
   </header>
   <main>
     <div class="content">
-      <p>Primeiramente, quero deixar muito claro que nem em meus melhores sonhos imaginei que seria tão incrível e sensacional dividir meus dias com alguém tão especial e maravilhosa quanto você.</p>
+      <p>Primeiramente, quero deixar muito claro que nem em meus melhores sonhos imaginei que seria tão incrível e sensacional dividir meus dias com alguém tão especial e maravilhoso quanto você.</p>
       <p>Vivemos tantas experiências neste primeiro ano que é difícil lembrar de tudo o que aconteceu, então tentei resumir esses momentos em fotos (confira abaixo :p).</p>
-      <p>Você tem o dom de transformar tudo em algo divertido, alegre e leve. Todos os dias tenho a certeza de que escolher dividir minha vida com você foi a melhor decisão que eu poderia ter tomado. Este foi o primeiro de muitos anos que viveremos juntos.</p>
+      <p>Você tem o dom de transformar tudo em algo divertido, alegre e leve. Todos os dias, ao acordar, tenho a certeza de que escolher dividir minha vida com você foi a melhor decisão que eu poderia ter tomado. Este foi o primeiro de muitos anos que viveremos juntos.</p>
       <p>Eu te amo mais do que você pode imaginar <span class="heart">❤️</span></p>
     </div>
     <div class="carousel-container">
@@ -127,3 +127,16 @@
     let slideIndex = 0;
     const slides = document.querySelectorAll('.carousel-image');
     function showSlide() {
+      slides.forEach(slide => slide.classList.remove('active'));
+      slideIndex = (slideIndex + 1) % slides.length;
+      slides[slideIndex].classList.add('active');
+    }
+    // Exibe a primeira imagem inicialmente
+    if (slides.length > 0) {
+      slides[slideIndex].classList.add('active');
+    }
+    // Altera a imagem a cada 1 segundo (1000 ms)
+    setInterval(showSlide, 1000);
+  </script>
+</body>
+</html>
